@@ -108,7 +108,7 @@ subString start end str = drop start (take (end + 1) str)
 --
 -- The string contains only spaces and/or numbers.
 strSum :: [Char] -> Int
-strSum str = sum (map read $ words str :: [Int])
+strSum str = sum (map read $ words str)
 
 -- | Write a function that takes a number and a list of numbers and
 -- returns a string, saying how many elements of the list are strictly
