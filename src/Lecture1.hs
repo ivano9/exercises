@@ -82,11 +82,7 @@ lastDigit n =
 minmax :: Int -> Int -> Int -> Int
 minmax x y z =
   let maxNum = max (max x y) z
-      minNum = case () of
-        _
-          | maxNum == x -> min y z
-          | maxNum == y -> min x z
-          | otherwise -> min x y
+      minNum = min (min x y) z
    in maxNum - minNum
 
 -- | Implement a function that takes a string, start and end positions
